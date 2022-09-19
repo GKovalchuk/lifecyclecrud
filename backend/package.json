@@ -1,0 +1,25 @@
+{
+	"name": "backernd",
+	"version": "1.0.0",
+	"description": "trial",
+	"main": "index.js",
+	"scripts": {
+		"prestart": "npm install",
+		"start": "forever server.js",
+		"watch": "forever -w server.js"
+	},
+	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "lifecyclecrud/backend/"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"forever": "^4.0.3",
+		"koa": "^2.13.4",
+		"koa-body": "^5.0.0",
+		"koa-router": "^12.0.0",
+		"koa2-cors": "^2.0.6"
+	}
+}
