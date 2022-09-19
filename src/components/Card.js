@@ -1,13 +1,20 @@
 import '../assets/css/card.css'
 
-function Card() {
+function Card(props) {
+	const text = props.text;
+	const cardId = props.id;
+
+	const removeCard = () => {
+		return props.removeCard(cardId)
+	};
+
 	return (
 		<div className="card">
-			<button className='card__button'>
+			<button onClick={removeCard} className='card__button'>
 				<img src="/assets/cross.png" alt="" />
 			</button>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere, neque, incidunt dolore voluptatem odio eius quae magnam ea quia explicabo consequatur numquam nostrum impedit assumenda labore iste voluptatum possimus!
+				{text}
 			</p>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import '../assets/css/addForm.css'
 
 function AddForm() {
+
 	return (
 		<div className="add-form">
 			<form action="" >

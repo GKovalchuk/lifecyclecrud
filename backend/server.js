@@ -9,13 +9,17 @@ const app = new Koa();
 app.use(cors());
 app.use(koaBody({ json: true }));
 
-const notes = [];
+const notes = [{
+	"id": 0,
+	"content": "То, что было введно в поле ввода"
+}];
 let nextId = 1;
 
 const router = new Router();
 
 router.get('/notes', async (ctx, next) => {
 	ctx.response.body = notes;
+	console.log('getGet')
 });
 
 router.post('/notes', async (ctx, next) => {
